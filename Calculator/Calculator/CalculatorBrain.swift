@@ -88,6 +88,7 @@ struct CalculatorBrain{
                     pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: accumulator!)
                     description = "\(description) \(symbol)"
                 }
+                accumulator = nil
             case .equals:
                 performPendingBinaryOperation()
             }
