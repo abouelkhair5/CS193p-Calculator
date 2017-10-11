@@ -54,6 +54,16 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func backSpace(_ sender: UIButton) {
+        if display.text!.count > 1 {
+            display.text!.removeLast()
+        }
+        else {
+            displayValue = 0
+            userInTheMiddleOfTyping = false
+        }
+    }
+    
     @IBAction func reset() {
         displayValue = 0
         descriptionDisplay.text = "..."
